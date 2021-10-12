@@ -42,6 +42,10 @@ public class MainActivity extends AppCompatActivity {
         calView = (CalendarView) findViewById(R.id.calendarView1);
 
         tvYear = (TextView) findViewById(R.id.tvYear);
+        tvMonth = (TextView) findViewById(R.id.tvMonth);
+        tvDay = (TextView) findViewById(R.id.tvDay);
+        tvHour = (TextView) findViewById(R.id.tvHour);
+        tvMinute = (TextView) findViewById(R.id.tvMinute);
 
         tPicker.setVisibility(View.INVISIBLE);
         calView.setVisibility(View.INVISIBLE);
@@ -74,12 +78,12 @@ public class MainActivity extends AppCompatActivity {
         btnEnd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                tvYear.setText(Integer.toString(selectYear));
-                tvMonth.setText(Integer.toString(selectMonth));
-                tvDay.setText(Integer.toString(selectDay));
+                tvYear.setText(Integer.toString(selectYear)+"년 ");
+                tvMonth.setText(Integer.toString(selectMonth)+"월 ");
+                tvDay.setText(Integer.toString(selectDay)+"일 ");
 
-                tvHour.setText((Integer.toString(tPicker.getCurrentHour())));
-                tvMinute.setText(Integer.toString(tPicker.getCurrentMinute()));
+                tvHour.setText(Integer.toString(tPicker.getCurrentHour())+"시 ");
+                tvMinute.setText(Integer.toString(tPicker.getCurrentMinute())+"분 ");
 
                 xx.stop();
                 xx.setTextColor(Color.BLUE);
